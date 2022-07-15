@@ -27,6 +27,10 @@ public class ArrayList {
         return datas[index];
     }
 
-    public void removeAt(int i) {
+    public void removeAt(int index) {
+        for(int i = index; i<size(); i++){
+            datas[i] = datas[i+1];
+        }
+        lastIndex--;
     }
 }
