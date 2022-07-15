@@ -33,4 +33,8 @@ public class ArrayList {
         }
         lastIndex--;
     }
+
+    public int getArrayLength() {
+        return 2;
+    }
 }
