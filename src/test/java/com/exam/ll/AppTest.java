@@ -120,4 +120,27 @@ public class AppTest {
         assertTrue(rs.contains("1 : 200"));
         assertTrue(rs.contains("2 : 30"));
     }
+    @Test
+    void addAt(){
+        ArrayList al = new ArrayList();
+        al.add(1000);
+        al.add(200);
+        al.add(30);
+
+        al.add(40,1);
+        al.add(800,1);
+        ByteArrayOutputStream output = TestUtil.setOutToByteArray();
+
+        al.showAllValues();
+
+        String rs = output.toString();
+
+        TestUtil.clearSetOutToByteArray(output);
+        assertTrue(rs.contains("== 전체 데이터 출력 =="));
+        assertTrue(rs.contains("0 : 1000"));
+        assertTrue(rs.contains("1 : 800"));
+        assertTrue(rs.contains("2 : 40"));
+        assertTrue(rs.contains("3 : 200"));
+        assertTrue(rs.contains("4 : 30"));
+    }
 }

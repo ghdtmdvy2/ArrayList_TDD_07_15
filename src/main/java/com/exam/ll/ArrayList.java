@@ -12,6 +12,19 @@ public class ArrayList {
     }
 
     public void add(int data) {
+        sizeUp();
+        lastIndex++;
+        datas[lastIndex] = data;
+    }
+    public void add(int data, int index) {
+        sizeUp();
+        for(int i = lastIndex; i>=index; i--){
+            datas[i+1] = datas[i];
+        }
+        lastIndex++;
+        datas[index] = data;
+    }
+    public void sizeUp(){
         if(lastIndex + 1 >= datas.length){
             int newArr[] = new int[datas.length * 2];
             for(int i = 0; i<size(); i++){
@@ -19,10 +32,7 @@ public class ArrayList {
             }
             datas = newArr;
         }
-        lastIndex++;
-        datas[lastIndex] = data;
     }
-
     public int get(int index) {
         return datas[index];
     }
