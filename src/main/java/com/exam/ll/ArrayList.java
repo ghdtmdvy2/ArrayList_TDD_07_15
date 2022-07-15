@@ -26,4 +26,7 @@ public class ArrayList {
     public int get(int index) {
         return datas[index];
     }
+
+    public void removeAt(int i) {
+    }
 }

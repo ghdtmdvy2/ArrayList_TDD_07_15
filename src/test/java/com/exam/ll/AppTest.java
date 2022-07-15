@@ -47,4 +47,13 @@ public class AppTest {
 
         assertEquals(200, rs);
     }
+    @Test
+    void removeAt() {
+        ArrayList al = new ArrayList();
+        al.add(100);
+        al.add(200);
+        al.add(300);
+
+        al.removeAt(1);
+    }
 }
