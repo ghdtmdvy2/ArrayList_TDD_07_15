@@ -23,7 +23,7 @@ public class ArrayList {
         datas[lastIndex] = data;
     }
 
-    public int get(int i) {
-        return 100;
+    public int get(int index) {
+        return datas[index];
     }
 }
