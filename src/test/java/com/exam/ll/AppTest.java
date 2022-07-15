@@ -20,5 +20,12 @@ public class AppTest {
         ArrayList al = new ArrayList();
         al.add(100);
     }
+    @Test
+    void get() {
+        ArrayList al = new ArrayList();
+        al.add(100);
+        int rs = al.get(0);
 
+        assertEquals(100, rs);
+    }
 }
